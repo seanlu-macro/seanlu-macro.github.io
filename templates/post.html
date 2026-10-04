@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% from "_macros.html" import status_badge %}
+{% block title %}{{ page.title }}{% endblock %}
+{% block description %}{{ page.summary or site.description }}{% endblock %}
+{% block og_type %}article{% endblock %}
+{% block head %}
+<meta property="article:published_time" content="{{ page.date | isodate }}">
+<script type="application/ld+json">
+{{ {"@context": "https://schema.org", "@type": "Article", "headline": page.title,
+    "description": page.summary, "datePublished": page.date | isodate,
+    "author": {"@type": "Person", "name": site.author},
+    "mainEntityOfPage": site.url ~ site.base_path ~ page.url} | tojson }}
+</script>
+{% include "_math.html" %}
+{% endblock %}
+{% block content %}
+<article class="post">
+  <header class="post-head">
+    <p class="kicker">
+      <a href="/{{ page.section }}/">{{ sections[page.section].title }}</a>
+      <span aria-hidden="true">·</span>
+      <time datetime="{{ page.date | isodate }}">{{ page.date | fmtdate }}</time>
+      {{ status_badge(page) }}
+    </p>
+    <h1>{{ page.title }}</h1>
+    {% if page.summary %}<p class="lede">{{ page.summary }}</p>{% endif %}
+  </header>
+
+  {% if page.section == 'trades' and page.ticket %}
+  <aside class="ticket" aria-label="Trade summary">
+    <dl>
+      {% for label, value in page.ticket %}
+      <div><dt>{{ label }}</dt><dd>{{ value }}</dd></div>
+      {% endfor %}
+    </dl>
+  </aside>
+  {% endif %}
+
+  {% if page.section == 'postmortems' and page.related %}
+  <aside class="related">
+    <span class="related-label">Reviewing</span>
+    <a href="{{ page.related.url }}">{{ page.related.title }}</a>
+    <span class="related-meta">published {{ page.related.date | fmtdate }}</span>
+  </aside>
+  {% endif %}
+
+  <div class="prose">
+    {{ page.body_html | safe }}
+  </div>
+
+  {% if page.section == 'trades' and page.related %}
+  <aside class="related">
+    <span class="related-label">Post-mortem</span>
+    <a href="{{ page.related.url }}">{{ page.related.title }}</a>
+  </aside>
+  {% endif %}
+</article>
+{% endblock %}

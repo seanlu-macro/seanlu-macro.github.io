@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% from "_macros.html" import entry_list %}
+{% block content %}
+<section class="intro">
+  <h1>{{ site.title }}</h1>
+  <p class="lede">{{ site.tagline }}</p>
+</section>
+
+<section class="home-section">
+  <div class="section-head">
+    <h2>{{ sections.trades.title }}</h2>
+    <a class="more" href="/trades/">All ideas &amp; track record →</a>
+  </div>
+  {% if trades %}{{ entry_list(trades[:8]) }}{% else %}<p class="empty">No trade ideas published yet.</p>{% endif %}
+</section>
+
+<section class="home-section">
+  <div class="section-head">
+    <h2>{{ sections.postmortems.title }}</h2>
+    <a class="more" href="/postmortems/">All post-mortems →</a>
+  </div>
+  {% if postmortems %}{{ entry_list(postmortems[:5]) }}{% else %}<p class="empty">No post-mortems yet.</p>{% endif %}
+</section>
+{% endblock %}

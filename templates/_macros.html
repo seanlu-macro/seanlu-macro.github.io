@@ -1,0 +1,23 @@
+{% macro status_badge(p) -%}
+  {%- if p.status == 'open' -%}<span class="badge badge-open">Open</span>
+  {%- elif p.status == 'closed' and p.result_r is not none -%}
+    <span class="badge {{ 'badge-win' if p.result_r > 0 else ('badge-loss' if p.result_r < 0 else '') }}">{{ p.meta.result }}</span>
+  {%- elif p.status -%}<span class="badge">{{ p.status | capitalize }}</span>
+  {%- elif p.meta.outcome -%}<span class="badge {{ 'badge-win' if p.meta.outcome|lower == 'win' else ('badge-loss' if p.meta.outcome|lower == 'loss' else '') }}">{{ p.meta.outcome }}</span>
+  {%- endif -%}
+{%- endmacro %}
+
+{% macro entry_list(pages) -%}
+<ol class="entries">
+  {% for p in pages %}
+  <li>
+    <time datetime="{{ p.date | isodate }}">{{ p.date | fmtdate }}</time>
+    <div class="entry-body">
+      <a class="entry-title" href="{{ p.url }}">{{ p.title }}</a>
+      {% if p.summary %}<p class="entry-summary">{{ p.summary }}</p>{% endif %}
+    </div>
+    <div class="entry-meta">{{ status_badge(p) }}</div>
+  </li>
+  {% endfor %}
+</ol>
+{%- endmacro %}

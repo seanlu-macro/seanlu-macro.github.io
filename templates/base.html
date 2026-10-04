@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{%- set t %}{% block title %}{% endblock %}{% endset %}
+{%- set d %}{% block description %}{{ site.description }}{% endblock %}{% endset %}
+{%- set full_title = (t ~ " · " ~ site.title) if t else (site.title ~ " · " ~ site.tagline) %}
+<title>{{ full_title }}</title>
+<meta name="description" content="{{ d | trim }}">
+<meta name="author" content="{{ site.author }}">
+<link rel="canonical" href="{{ site.url }}{{ site.base_path }}{{ page_url }}">
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:title" content="{{ t or site.title }}">
+<meta property="og:description" content="{{ d | trim }}">
+<meta property="og:url" content="{{ site.url }}{{ site.base_path }}{{ page_url }}">
+<meta property="og:type" content="{% block og_type %}website{% endblock %}">
+<meta name="twitter:card" content="summary">
+<meta name="color-scheme" content="light dark">
+<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="/feed.xml">
+<link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/static/fonts/source-serif-4.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/static/style.css">
+{% block head %}{% endblock %}
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="site-name" href="/">{{ site.title }}</a>
+    <nav aria-label="Main">
+      {% for key, s in sections.items() %}
+      <a href="/{{ key }}/"{% if page_url.startswith('/' ~ key ~ '/') %} aria-current="page"{% endif %}>{{ s.title }}</a>
+      {% endfor %}
+      <a href="/about/"{% if page_url == '/about/' %} aria-current="page"{% endif %}>About</a>
+    </nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+{% block content %}{% endblock %}
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="disclaimer">{{ site.disclaimer }}</p>
+    <p class="footer-links">
+      <span>© {{ year }} {{ site.author }}</span>
+      {% if site.email %}<a href="mailto:{{ site.email }}">Email</a>{% endif %}
+      {% if site.linkedin %}<a href="{{ site.linkedin }}">LinkedIn</a>{% endif %}
+      {% if site.x %}<a href="{{ site.x }}">X</a>{% endif %}
+      <a href="/feed.xml">RSS</a>
+    </p>
+  </div>
+</footer>
+</body>
+</html>

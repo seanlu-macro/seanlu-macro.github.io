@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% from "_macros.html" import entry_list, status_badge %}
+{% block title %}{{ sections[section].title }}{% endblock %}
+{% block description %}{{ sections[section].intro }}{% endblock %}
+{% block content %}
+<header class="page-head">
+  <h1>{{ sections[section].title }}</h1>
+  <p class="lede">{{ sections[section].intro }}</p>
+</header>
+
+{% if record %}
+<section aria-label="Track record">
+  <dl class="stats">
+    <div><dt>Ideas</dt><dd>{{ record.ideas }}</dd></div>
+    <div><dt>Open</dt><dd>{{ record.open }}</dd></div>
+    <div><dt>Closed</dt><dd>{{ record.closed }}</dd></div>
+    <div><dt>Hit rate</dt><dd>{{ record.hit_rate }}</dd></div>
+    <div><dt>Total</dt><dd>{{ record.total_r }}</dd></div>
+  </dl>
+  {% if pages %}
+  <div class="table-wrap">
+  <table class="record">
+    <thead><tr><th>Date</th><th>Idea</th><th>Asset</th><th class="num">Status</th></tr></thead>
+    <tbody>
+    {% for p in pages %}
+      <tr>
+        <td class="nowrap">{{ p.date | fmtdate }}</td>
+        <td><a href="{{ p.url }}">{{ p.title }}</a></td>
+        <td>{{ p.meta.asset or '' }}</td>
+        <td class="num">{{ status_badge(p) }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  </div>
+  <p class="note">Results in R: multiples of the risk defined in each idea before entry.</p>
+  {% else %}<p class="empty">No trade ideas published yet.</p>{% endif %}
+</section>
+{% else %}
+  {% if pages %}{{ entry_list(pages) }}{% else %}<p class="empty">Nothing published yet.</p>{% endif %}
+{% endif %}
+{% endblock %}

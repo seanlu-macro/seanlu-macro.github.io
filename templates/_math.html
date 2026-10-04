@@ -1,0 +1,14 @@
+{% if page.has_math %}
+<link rel="stylesheet" href="/static/katex/katex.min.css">
+<script defer src="/static/katex/katex.min.js"></script>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".arithmatex").forEach(el => {
+      const src = el.textContent.trim();
+      const display = el.tagName === "DIV";
+      const tex = display ? src.replace(/^\\\[|\\\]$/g, "") : src.replace(/^\\\(|\\\)$/g, "");
+      katex.render(tex, el, { displayMode: display, throwOnError: false });
+    });
+  });
+</script>
+{% endif %}

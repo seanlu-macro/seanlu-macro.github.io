@@ -1,0 +1,21 @@
+# ─── Site settings ──────────────────────────────────────────────
+# Edit these, then run:  python build.py
+title: Sean Lu
+tagline: Macro trade ideas, written down before the outcome is known.
+description: >-
+  Macro trade ideas and post-mortems by Sean Lu — rates, FX and cross-asset
+  views, each with an explicit entry, stop, target and an honest review.
+author: Sean Lu
+# Full URL of the live site, no trailing slash. Used for canonical links,
+# the sitemap and the RSS feed.
+url: https://seanlu-macro.github.io
+# Leave empty if the site lives at the root of a domain
+# (yourname.github.io or a custom domain). Set to "/repo-name" only if you
+# publish from a project repository at yourname.github.io/repo-name.
+base_path: ""
+email: ""          # optional, shown in the footer if set
+linkedin: ""       # optional, full URL
+x: ""              # optional, full URL
+disclaimer: >-
+  Views are my own and for educational purposes only. Positions are
+  hypothetical unless stated. Nothing here is investment advice.

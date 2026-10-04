@@ -1,0 +1,272 @@
+/* Fonts are self-hosted in static/fonts (no third-party requests). */
+@font-face { font-family: "Source Serif 4"; font-style: normal; font-weight: 200 900; font-display: swap;
+  src: url("fonts/source-serif-4.woff2") format("woff2"); }
+@font-face { font-family: "Source Serif 4"; font-style: italic; font-weight: 200 900; font-display: swap;
+  src: url("fonts/source-serif-4-italic.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 100 900; font-display: swap;
+  src: url("fonts/inter.woff2") format("woff2"); }
+
+/* ──────────────────────────────────────────────────────────────
+   Colours — change the whole look here.
+   ────────────────────────────────────────────────────────────── */
+:root {
+  --bg:       #fcfbf8;   /* warm paper */
+  --surface:  #f4f1ea;   /* trade ticket, code */
+  --text:     #1c1b19;   /* ink */
+  --muted:    #67635b;   /* dates, captions */
+  --rule:     #e4e0d6;   /* hairlines */
+  --accent:   #1f3a5f;   /* links: deep navy */
+  --win:      #2e6b4a;
+  --loss:     #a23b2e;
+
+  --serif: "Source Serif 4", "Iowan Old Style", Charter, Georgia, serif;
+  --sans:  Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:  ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --measure: 40rem;      /* width of the reading column */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:      #131312;
+    --surface: #1c1b19;
+    --text:    #ebe8e1;
+    --muted:   #a29e95;
+    --rule:    #2e2c28;
+    --accent:  #a9c1e0;
+    --win:     #86c3a0;
+    --loss:    #e4907f;
+  }
+}
+
+/* ─── Base ───────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  font-size: 106.25%;               /* 17px */
+  -webkit-text-size-adjust: 100%;
+}
+@media (min-width: 720px) { html { font-size: 112.5%; } }   /* 18px */
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--serif);
+  line-height: 1.65;
+  font-optical-sizing: auto;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+a:hover { text-decoration-thickness: 2px; }
+
+.skip { position: absolute; left: -999px; }
+.skip:focus { left: 1rem; top: 1rem; background: var(--bg); padding: .5rem; }
+
+/* ─── Header & footer ───────────────────────────────────────── */
+.site-header .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: .5rem 1.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.site-name {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+.site-header nav { display: flex; gap: 1.25rem; font-family: var(--sans); font-size: .8rem; }
+.site-header nav a { color: var(--muted); text-decoration: none; }
+.site-header nav a:hover, .site-header nav a[aria-current] { color: var(--text); }
+.site-header nav a[aria-current] { box-shadow: 0 1px 0 currentColor; }
+
+main.wrap { padding-bottom: 5rem; }
+
+.site-footer { border-top: 1px solid var(--rule); }
+.site-footer .wrap { padding-top: 1.5rem; padding-bottom: 3rem; }
+.site-footer p { font-family: var(--sans); font-size: .75rem; color: var(--muted); margin: 0 0 .5rem; line-height: 1.6; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 1rem; }
+.footer-links a { color: var(--muted); }
+
+/* ─── Headings & lede ───────────────────────────────────────── */
+h1, h2, h3 { font-weight: 600; line-height: 1.2; letter-spacing: -0.015em; }
+h1 { font-size: 2.1rem; margin: 0 0 .75rem; }
+.lede { font-size: 1.15rem; color: var(--muted); margin: 0; line-height: 1.5; }
+
+.intro { padding: 2.5rem 0 1rem; }
+.intro h1 { font-size: 2.5rem; }
+.page-head { padding: 1.5rem 0 2rem; }
+
+/* ─── Home sections & entry lists ───────────────────────────── */
+.home-section { margin-top: 3rem; }
+.section-head {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;
+  border-bottom: 1px solid var(--text);
+  padding-bottom: .5rem;
+}
+.section-head h2 {
+  font-family: var(--sans); font-size: .75rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: .08em; margin: 0;
+}
+.more { font-family: var(--sans); font-size: .75rem; color: var(--muted); text-decoration: none; }
+.more:hover { color: var(--text); }
+
+.entries { list-style: none; margin: 0; padding: 0; }
+.entries li {
+  display: grid;
+  grid-template-columns: 6.5rem 1fr auto;
+  gap: .25rem 1.25rem;
+  align-items: baseline;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+.entries time { font-family: var(--sans); font-size: .75rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.entry-title { color: var(--text); text-decoration: none; font-size: 1.1rem; font-weight: 600; line-height: 1.35; }
+.entry-title:hover { color: var(--accent); }
+.entry-summary { margin: .3rem 0 0; color: var(--muted); font-size: .95rem; line-height: 1.5; }
+
+@media (max-width: 560px) {
+  .entries li { grid-template-columns: 1fr auto; }
+  .entries time { grid-column: 1 / -1; }
+  .entries .entry-meta { grid-row: 1; grid-column: 2; }
+}
+.empty { color: var(--muted); font-style: italic; }
+
+/* ─── Badges ─────────────────────────────────────────────────── */
+.badge {
+  display: inline-block;
+  font-family: var(--sans); font-size: .68rem; font-weight: 500;
+  letter-spacing: .04em; text-transform: uppercase;
+  font-variant-numeric: tabular-nums;
+  padding: .15rem .5rem;
+  border: 1px solid var(--rule); border-radius: 999px;
+  color: var(--muted);
+  white-space: nowrap;
+  vertical-align: .1em;
+}
+.badge-open { color: var(--accent); border-color: currentColor; }
+.badge-win  { color: var(--win);  border-color: currentColor; }
+.badge-loss { color: var(--loss); border-color: currentColor; }
+
+/* ─── Track record ───────────────────────────────────────────── */
+.stats {
+  display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px;
+  margin: 0 0 2rem; padding: 0;
+  background: var(--rule); border: 1px solid var(--rule);
+}
+.stats div { background: var(--bg); padding: .9rem 1rem; }
+.stats dt { font-family: var(--sans); font-size: .68rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+.stats dd { margin: .2rem 0 0; font-size: 1.4rem; font-weight: 600; font-variant-numeric: tabular-nums; }
+@media (max-width: 560px) { .stats { grid-template-columns: repeat(3, 1fr); } }
+
+.note { font-family: var(--sans); font-size: .75rem; color: var(--muted); }
+
+/* ─── Article ────────────────────────────────────────────────── */
+.post-head { padding: 1.5rem 0 1.75rem; }
+.kicker {
+  display: flex; flex-wrap: wrap; align-items: center; gap: .5rem;
+  font-family: var(--sans); font-size: .75rem; color: var(--muted); margin: 0 0 1rem;
+}
+.kicker a { color: var(--muted); text-decoration: none; }
+.kicker a:hover { color: var(--text); }
+
+.ticket {
+  background: var(--surface);
+  border-top: 2px solid var(--text);
+  padding: 1rem 1.25rem;
+  margin: 0 0 2.5rem;
+}
+.ticket dl {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(10.5rem, 1fr));
+  gap: .9rem 1.5rem; margin: 0;
+}
+.ticket dt { font-family: var(--sans); font-size: .66rem; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); }
+.ticket dd { margin: .15rem 0 0; font-family: var(--sans); font-size: .88rem; font-weight: 500; line-height: 1.4; font-variant-numeric: tabular-nums; }
+
+.related {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: .25rem .75rem;
+  border-left: 2px solid var(--accent);
+  padding: .4rem 0 .4rem 1rem; margin: 0 0 2.5rem;
+}
+.prose + .related { margin: 3rem 0 0; }
+.related-label { font-family: var(--sans); font-size: .68rem; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); }
+.related-meta { font-family: var(--sans); font-size: .75rem; color: var(--muted); }
+
+/* ─── Prose ──────────────────────────────────────────────────── */
+.prose > * + * { margin-top: 1.1em; }
+.prose p, .prose ul, .prose ol { margin-bottom: 0; }
+.prose h2 { font-size: 1.35rem; margin: 2.4em 0 0; }
+.prose h3 { font-size: 1.1rem; margin: 2em 0 0; }
+.prose h2 + *, .prose h3 + * { margin-top: .6em; }
+.prose ul, .prose ol { padding-left: 1.3em; }
+.prose li + li { margin-top: .35em; }
+.prose strong { font-weight: 600; }
+.prose hr { border: 0; border-top: 1px solid var(--rule); margin: 2.5em 0; }
+
+.prose blockquote {
+  margin-left: 0; padding-left: 1.1rem;
+  border-left: 2px solid var(--rule); color: var(--muted); font-style: italic;
+}
+
+.prose code {
+  font-family: var(--mono); font-size: .85em;
+  background: var(--surface); padding: .1em .3em; border-radius: 3px;
+}
+.prose pre {
+  background: var(--surface); padding: 1rem 1.1rem; overflow-x: auto;
+  font-size: .82rem; line-height: 1.55; border-radius: 4px;
+}
+.prose pre code { background: none; padding: 0; }
+
+/* Figures: images, charts, screenshots */
+.prose figure { margin: 2em 0; }
+.prose img { display: block; max-width: 100%; height: auto; margin: 0 auto; }
+.prose figcaption {
+  font-family: var(--sans); font-size: .75rem; color: var(--muted);
+  margin-top: .6rem; line-height: 1.5;
+}
+/* Add {.bordered} after an image line to frame screenshots */
+.prose img.bordered, .prose figure.bordered img { border: 1px solid var(--rule); }
+
+/* Tables */
+.table-wrap { overflow-x: auto; }
+.prose table, table.record {
+  width: 100%; border-collapse: collapse;
+  font-family: var(--sans); font-size: .82rem;
+}
+.prose th, .record th {
+  text-align: left; font-weight: 600; font-size: .7rem;
+  text-transform: uppercase; letter-spacing: .05em; color: var(--muted);
+  border-bottom: 1px solid var(--text); padding: .5rem .75rem .5rem 0;
+}
+.prose td, .record td { border-bottom: 1px solid var(--rule); padding: .6rem .75rem .6rem 0; vertical-align: baseline; }
+.record td a { color: var(--text); text-decoration: none; font-weight: 500; }
+.record td a:hover { color: var(--accent); }
+.num, .prose td[align="right"], .prose th[align="right"] { text-align: right; font-variant-numeric: tabular-nums; }
+.nowrap { white-space: nowrap; }
+
+/* Math */
+.prose div.arithmatex, .katex-display { overflow-x: auto; overflow-y: hidden; padding: .25em 0; }
+.katex { font-size: 1.05em; }
+
+/* Footnotes */
+.footnote { font-size: .85rem; color: var(--muted); }
+.footnote hr { margin: 3em 0 1em; }
+
+@media (prefers-color-scheme: dark) {
+  .prose figure img { border-radius: 4px; }   /* white charts sit as cards on dark */
+}
