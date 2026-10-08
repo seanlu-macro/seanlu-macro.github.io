@@ -10,33 +10,23 @@
    Colours — change the whole look here.
    ────────────────────────────────────────────────────────────── */
 :root {
-  --bg:       #fcfbf8;   /* warm paper */
-  --surface:  #f4f1ea;   /* trade ticket, code */
-  --text:     #1c1b19;   /* ink */
-  --muted:    #67635b;   /* dates, captions */
-  --rule:     #e4e0d6;   /* hairlines */
-  --accent:   #1f3a5f;   /* links: deep navy */
-  --win:      #2e6b4a;
-  --loss:     #a23b2e;
+  /* The site is dark-only. The old light palette, for reference:
+     bg #fcfbf8 · surface #f4f1ea · text #1c1b19 · muted #67635b
+     rule #e4e0d6 · accent #1f3a5f · win #2e6b4a · loss #a23b2e */
+  --bg:       #131312;   /* near-black */
+  --surface:  #1c1b19;   /* trade ticket, code */
+  --text:     #ebe8e1;   /* warm off-white */
+  --muted:    #a29e95;   /* dates, captions */
+  --rule:     #2e2c28;   /* hairlines */
+  --accent:   #a9c1e0;   /* links: soft blue */
+  --win:      #86c3a0;
+  --loss:     #e4907f;
 
   --serif: "Source Serif 4", "Iowan Old Style", Charter, Georgia, serif;
   --sans:  Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
   --mono:  ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 
   --measure: 40rem;      /* width of the reading column */
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg:      #131312;
-    --surface: #1c1b19;
-    --text:    #ebe8e1;
-    --muted:   #a29e95;
-    --rule:    #2e2c28;
-    --accent:  #a9c1e0;
-    --win:     #86c3a0;
-    --loss:    #e4907f;
-  }
 }
 
 /* ─── Base ───────────────────────────────────────────────────── */
@@ -102,6 +92,12 @@ main.wrap { padding-bottom: 5rem; }
 .footer-links { display: flex; flex-wrap: wrap; gap: 1rem; }
 .footer-links a { color: var(--muted); }
 
+/* Icon links (About page contact) */
+.contact-links { display: flex; flex-wrap: wrap; gap: .6rem 1.75rem; font-family: var(--sans); font-size: .9rem; }
+.contact-links a { display: inline-flex; align-items: center; gap: .5rem; color: var(--text); text-decoration: none; }
+.contact-links a:hover { color: var(--accent); }
+.contact-links svg { width: 1.15rem; height: 1.15rem; flex: none; }
+
 /* ─── Headings & lede ───────────────────────────────────────── */
 h1, h2, h3 { font-weight: 600; line-height: 1.2; letter-spacing: -0.015em; }
 h1 { font-size: 2.1rem; margin: 0 0 .75rem; }
@@ -109,6 +105,7 @@ h1 { font-size: 2.1rem; margin: 0 0 .75rem; }
 
 .intro { padding: 2.5rem 0 1rem; }
 .intro h1 { font-size: 2.5rem; }
+.home-note { margin: 1.25rem 0 0; font-size: 1rem; line-height: 1.65; color: var(--text); }
 .page-head { padding: 1.5rem 0 2rem; }
 
 /* ─── Home sections & entry lists ───────────────────────────── */
@@ -267,6 +264,14 @@ h1 { font-size: 2.1rem; margin: 0 0 .75rem; }
 .footnote { font-size: .85rem; color: var(--muted); }
 .footnote hr { margin: 3em 0 1em; }
 
-@media (prefers-color-scheme: dark) {
-  .prose figure img { border-radius: 4px; }   /* white charts sit as cards on dark */
-}
+.prose figure img { border-radius: 4px; }   /* white charts sit as cards on dark */
+
+/* ─── Market strip (home page) ───────────────────────────────── */
+.ticker { margin: 1.75rem 0 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.ticker .tradingview-widget-container__widget { min-height: 46px; }
+/* The widget is a cross-origin iframe. If its colour scheme differs from the
+   page's (dark), browsers paint it an opaque white backdrop. Matching it to
+   the iframe's own scheme keeps it transparent over our dark background. */
+.ticker iframe { color-scheme: light; background: transparent !important; }
+.ticker .tradingview-widget-copyright { font-family: var(--sans) !important; font-size: .62rem !important; text-align: right !important; line-height: 1 !important; padding: .3rem 0 .4rem !important; }
+.ticker .tradingview-widget-copyright a, .ticker .tradingview-widget-copyright span { color: var(--muted) !important; text-decoration: none !important; }

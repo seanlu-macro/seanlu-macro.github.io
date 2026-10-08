@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="488.16pt" height="277.160156pt" viewBox="0 0 488.16 277.160156" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-08T01:14:01.895165</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 277.160156 
+L 488.16 277.160156 
+L 488.16 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 75.6 230.742281 
+L 477.36 230.742281 
+L 477.36 31.158281 
+L 75.6 31.158281 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1"/>
+     <g id="text_1">
+      <text style="font-size: 10px; font-family: 'Inter', 'Helvetica Neue', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #67635b" x="84.474217" y="244.339938" transform="rotate(-0 84.474217 244.339938)">Oct '26</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2"/>
+     <g id="text_2">
+      <text style="font-size: 10px; font-family: 'Inter', 'Helvetica Neue', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #67635b" x="158.69494" y="244.339938" transform="rotate(-0 158.69494 244.339938)">Jan '27</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3"/>
+     <g id="text_3">
+      <text style="font-size: 10px; font-family: 'Inter', 'Helvetica Neue', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #67635b" x="231.302169" y="244.339938" transform="rotate(-0 231.302169 244.339938)">Apr '27</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4"/>
+     <g id="text_4">
+      <text style="font-size: 10px; font-family: 'Inter', 'Helvetica Neue', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #67635b" x="304.716145" y="244.340719" transform="rotate(-0 304.716145 244.340719)">Jul '27</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5"/>
+     <g id="text_5">
+      <text style="font-size: 10px; font-family: 'Inter', 'Helvetica Neue', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #67635b" x="378.936867" y="244.339938" transform="rotate(-0 378.936867 244.339938)">Oct '27</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_6"/>
+     <g id="text_6">
+      <text style="font-size: 10px; font-family: 'Inter', 'Helvetica Neue', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #67635b" x="453.15759" y="244.339938" transform="rotate(-0 453.15759 244.339938)">Jan '28</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_7">
+      <path d="M 75.6 216.486281 
+L 477.36 216.486281 
+" clip-path="url(#p3dcec16bb9)" style="fill: none; stroke: #e4e0d6; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8"/>
+     <g id="text_7">
+      <text style="font-size: 10px; font-family: 'Inter', 'Helvetica Neue', 'Arial', 'DejaVu Sans'; text-anchor: end; fill: #67635b" x="72.1" y="220.285109" transform="rotate(-0 72.1 220.285109)">3.60%</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_9">
+      <path d="M 75.6 187.974281 
+L 477.36 187.974281 
+" clip-path="url(#p3dcec16bb9)" style="fill: none; stroke: #e4e0d6; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10"/>
+     <g id="text_8">
+      <text style="font-size: 10px; font-family: 'Inter', 'Helvetica Neue', 'Arial', 'DejaVu Sans'; text-anchor: end; fill: #67635b" x="72.1" y="191.773109" transform="rotate(-0 72.1 191.773109)">3.80%</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_11">
+      <path d="M 75.6 159.462281 
+L 477.36 159.462281 
+" clip-path="url(#p3dcec16bb9)" style="fill: none; stroke: #e4e0d6; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12"/>
+     <g id="text_9">
+      <text style="font-size: 10px; font-family: 'Inter', 'Helvetica Neue', 'Arial', 'DejaVu Sans'; text-anchor: end; fill: #67635b" x="72.1" y="163.261109" transform="rotate(-0 72.1 163.261109)">4.00%</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_13">
+      <path d="M 75.6 130.950281 
+L 477.36 130.950281 
+" clip-path="url(#p3dcec16bb9)" style="fill: none; stroke: #e4e0d6; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_14"/>
+     <g id="text_10">
+      <text style="font-size: 10px; font-family: 'Inter', 'Helvetica Neue', 'Arial', 'DejaVu Sans'; text-anchor: end; fill: #67635b" x="72.1" y="134.749109" transform="rotate(-0 72.1 134.749109)">4.20%</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_15">
+      <path d="M 75.6 102.438281 
+L 477.36 102.438281 
+" clip-path="url(#p3dcec16bb9)" style="fill: none; stroke: #e4e0d6; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_16"/>
+     <g id="text_11">
+      <text style="font-size: 10px; font-family: 'Inter', 'Helvetica Neue', 'Arial', 'DejaVu Sans'; text-anchor: end; fill: #67635b" x="72.1" y="106.237109" transform="rotate(-0 72.1 106.237109)">4.40%</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_17">
+      <path d="M 75.6 73.926281 
+L 477.36 73.926281 
+" clip-path="url(#p3dcec16bb9)" style="fill: none; stroke: #e4e0d6; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_18"/>
+     <g id="text_12">
+      <text style="font-size: 10px; font-family: 'Inter', 'Helvetica Neue', 'Arial', 'DejaVu Sans'; text-anchor: end; fill: #67635b" x="72.1" y="77.725109" transform="rotate(-0 72.1 77.725109)">4.60%</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_19">
+      <path d="M 75.6 45.414281 
+L 477.36 45.414281 
+" clip-path="url(#p3dcec16bb9)" style="fill: none; stroke: #e4e0d6; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_20"/>
+     <g id="text_13">
+      <text style="font-size: 10px; font-family: 'Inter', 'Helvetica Neue', 'Arial', 'DejaVu Sans'; text-anchor: end; fill: #67635b" x="72.1" y="49.213109" transform="rotate(-0 72.1 49.213109)">4.80%</text>
+     </g>
+    </g>
+   </g>
+   <g id="line2d_21">
+    <path d="M 87.701205 177.282281 
+L 140.139759 177.282281 
+L 140.139759 141.642281 
+L 219.200964 141.642281 
+L 219.200964 106.002281 
+L 292.61494 106.002281 
+L 292.61494 70.362281 
+L 316.010602 70.362281 
+L 316.010602 70.362281 
+" clip-path="url(#p3dcec16bb9)" style="fill: none; stroke: #1c1b19; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_22">
+    <path d="M 157.888193 141.642281 
+L 452.350843 141.642281 
+" clip-path="url(#p3dcec16bb9)" style="fill: none; stroke-dasharray: 7.4,3.2; stroke-dashoffset: 0; stroke: #1f3a5f; stroke-width: 2"/>
+    <defs>
+     <path id="ma85c7f073b" d="M 0 3 
+C 0.795609 3 1.55874 2.683901 2.12132 2.12132 
+C 2.683901 1.55874 3 0.795609 3 0 
+C 3 -0.795609 2.683901 -1.55874 2.12132 -2.12132 
+C 1.55874 -2.683901 0.795609 -3 0 -3 
+C -0.795609 -3 -1.55874 -2.683901 -2.12132 -2.12132 
+C -2.683901 -1.55874 -3 -0.795609 -3 0 
+C -3 0.795609 -2.683901 1.55874 -2.12132 2.12132 
+C -1.55874 2.683901 -0.795609 3 0 3 
+z
+" style="stroke: #ffffff; stroke-width: 1.5"/>
+    </defs>
+    <g clip-path="url(#p3dcec16bb9)">
+     <use xlink:href="#ma85c7f073b" x="157.888193" y="141.642281" style="fill: #1f3a5f; stroke: #ffffff; stroke-width: 1.5"/>
+     <use xlink:href="#ma85c7f073b" x="452.350843" y="141.642281" style="fill: #1f3a5f; stroke: #ffffff; stroke-width: 1.5"/>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 303.909398 138.527328 
+Q 303.909398 106.00391 303.909398 73.480492 
+" style="fill: none; stroke: #67635b; stroke-linecap: round"/>
+    <path d="M 305.909398 134.527328 
+L 303.909398 138.527328 
+L 301.909398 134.527328 
+" style="fill: none; stroke: #67635b; stroke-linecap: round"/>
+    <path d="M 301.909398 77.480492 
+L 303.909398 73.480492 
+L 305.909398 77.480492 
+" style="fill: none; stroke: #67635b; stroke-linecap: round"/>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 9px; font-family: 'Inter', 'Helvetica Neue', 'Arial', 'DejaVu Sans'; fill: #67635b" transform="translate(310.363373 97.538062)">≈50bp more</text>
+    <text style="font-size: 9px; font-family: 'Inter', 'Helvetica Neue', 'Arial', 'DejaVu Sans'; fill: #67635b" transform="translate(310.363373 108.340523)">tightening priced</text>
+    <text style="font-size: 9px; font-family: 'Inter', 'Helvetica Neue', 'Arial', 'DejaVu Sans'; fill: #67635b" transform="translate(310.363373 119.142984)">than the dots</text>
+   </g>
+   <g id="text_15">
+    <text style="font-weight: 600; font-size: 11px; font-family: 'Inter', 'Helvetica Neue', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #1c1b19" x="75.6" y="19.158281" transform="rotate(-0 75.6 19.158281)">The market prices more Fed hikes than the Fed projects</text>
+   </g>
+   <g id="legend_1">
+    <g id="line2d_23">
+     <path d="M 284.547656 203.829469 
+L 293.547656 203.829469 
+L 293.547656 203.829469 
+L 302.547656 203.829469 
+L 302.547656 203.829469 
+" style="fill: none; stroke: #1c1b19; stroke-width: 2; stroke-linecap: square"/>
+    </g>
+    <g id="text_16">
+     <text style="font-size: 9px; font-family: 'Inter', 'Helvetica Neue', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #1c1b19" x="309.747656" y="206.979469" transform="rotate(-0 309.747656 206.979469)">Market pricing (fed funds midpoint)</text>
+    </g>
+    <g id="line2d_24">
+     <path d="M 284.547656 217.330172 
+L 293.547656 217.330172 
+L 302.547656 217.330172 
+" style="fill: none; stroke-dasharray: 7.4,3.2; stroke-dashoffset: 0; stroke: #1f3a5f; stroke-width: 2"/>
+     <g>
+      <use xlink:href="#ma85c7f073b" x="293.547656" y="217.330172" style="fill: #1f3a5f; stroke: #ffffff; stroke-width: 1.5"/>
+     </g>
+    </g>
+    <g id="text_17">
+     <text style="font-size: 9px; font-family: 'Inter', 'Helvetica Neue', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #1c1b19" x="309.747656" y="220.480172" transform="rotate(-0 309.747656 220.480172)">Fed median dot</text>
+    </g>
+   </g>
+  </g>
+  <g id="text_18">
+   <text style="font-size: 8px; font-family: 'Inter', 'Helvetica Neue', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #67635b" x="10.8" y="264.438281" transform="rotate(-0 10.8 264.438281)">Sources: CME FedWatch (2 Oct 2026, via FXStreet); Federal Reserve, Sept 2026.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p3dcec16bb9">
+   <rect x="75.6" y="31.158281" width="401.76" height="199.584"/>
+  </clipPath>
+ </defs>
+</svg>

@@ -32,7 +32,7 @@ SECTIONS = {
     "trades": {
         "title": "Trade Ideas",
         "intro": "Each idea is published before the outcome is known, with an "
-                 "explicit entry, stop, target and the reason it could be wrong.",
+                 "entry, stop, target and the reason it could be wrong.",
     },
     "postmortems": {
         "title": "Post-Mortems",

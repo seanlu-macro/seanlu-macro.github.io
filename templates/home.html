@@ -4,6 +4,8 @@
 <section class="intro">
   <h1>{{ site.title }}</h1>
   <p class="lede">{{ site.tagline }}</p>
+  {% if site.intro %}<p class="home-note">{{ site.intro }}</p>{% endif %}
+  {% include "_ticker.html" %}
 </section>
 
 <section class="home-section">
