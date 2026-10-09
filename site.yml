@@ -3,10 +3,11 @@
 title: Sean Lu
 tagline: The world through a market lens.
 intro: >-
-  I started this site to document my ideas, philosophies and, inevitably, my 
-  mistakes. Here I'll share whatever is capturing my curiosity in markets, the 
-  trades it leads to, and what each one teaches me. I hope it's an evolving 
-  record of how I see the world and a way to understand who I am as an investor.
+  Welcome! I started this site to document my ideas, philosophies, and, 
+  inevitably, my mistakes. Here, I'll share whatever is capturing my curiosity in 
+  markets, the trades it leads to, and what each one teaches me. I hope it's an 
+  evolving record of how I see the world and a way to understand who I am as an 
+  investor.
 description: >-
   Macro trade ideas and post-mortems by Sean Lu — rates, FX and cross-asset
   views, each with an explicit entry, stop, target and an honest review.
@@ -19,7 +20,7 @@ url: https://seanlu-macro.github.io
 # publish from a project repository at yourname.github.io/repo-name.
 base_path: ""
 email: "seanlu@berkeley.edu"                  # optional, shown in the footer if set
-linkedin: "www.linkedin.com/in/lu-sean"       # optional, full URL
+linkedin: "https://www.linkedin.com/in/lu-sean"     # optional, full URL
 x: ""              # optional, full URL
 disclaimer: >-
   Views are my own and for educational purposes only. Positions are
